@@ -1,0 +1,50 @@
+<template>
+    <!-- <lightning-card> -->
+         <!--one way binding   -->
+        <!-- {name} -->
+        <!-- our current time is {currentTime} and the score is {SubscriberTime}
+         <c-child-lwc child-name="vaishali" member-val=5></c-child-lwc>
+       
+   
+         out subscribes total watch duration is {totalwatchDuration}
+    </lightning-card>
+    <lightning-card class="slds-card" title="Two way binding">
+        <lightning-input value={memberStatus} onchange={handleChange} label="Enter value" type="text"></lightning-input>
+        <p>the value of :{memberStatus}</p> -->
+       
+
+        <!-- <div class="slds-card slds-p-around_medium">
+            <lightning-button label="Brand" title="Option-1"  variant="brand"></lightning-button>
+             <lightning-button label="Brand" title="Option-1"  variant="brand"></lightning-button>
+             <lightning-button label="Brand" title="Option-1"  variant="brand"></lightning-button>
+          <template lwc:if={displayNone}>
+             <p>This is first paragraph</p>
+             <p>This is second paragraph</p>
+             <p>This is third paragraph</p>
+</template>
+        </div> -->
+
+
+    <!-- </lightning-card> -->
+   <lightning-card title="My Task List">
+    <!-- <template for:each={taskList} for:item="eachTask">
+
+        <p key={eachTask.taskId}>{eachTask.taskname} and the priority is {eachTask.taskPriority}</p>
+    </template>
+      -->
+
+      <template iterator:task={taskList}>
+       
+        <template lwc:if={task.first}>
+             Top Priority task for the day
+            {task.value.taskname}
+        </template>
+        <div key={task.value.taskId}>{task.value.taskname}-{task.value.taskPriority}</div>
+       
+        <template lwc:if={task.last}>
+             Least Priority task for the day.
+           {task.value.taskname}
+        </template>
+      </template>
+   </lightning-card>
+</template>

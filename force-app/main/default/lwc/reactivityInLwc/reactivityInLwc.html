@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Check Reactivity">
+        {userAddress}
+        <lightning-button label="Check Reactivity of Primitive values" onclick={updateAddress}>
+        
+        </lightning-button>
+        <c-reactivity-within-child user-address={userAddress}></c-reactivity-within-child>
+    </lightning-card>
+</template>

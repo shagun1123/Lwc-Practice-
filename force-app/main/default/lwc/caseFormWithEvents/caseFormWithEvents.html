@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Case Form With Events">
+
+        <lightning-record-edit-form record-id={recordId} object-api-name={objectApiName} onsubmit="">
+            <lightning-input-field field-name="Subject"></lightning-input-field>
+            <lightning-button type="submit" label="Create Case" variant="brand" ></lightning-button>
+            <lightning-button type="reset" label="Reset" variant="brand" ></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
